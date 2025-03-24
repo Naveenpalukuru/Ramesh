@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh M - Finance & Accounting Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f5f7fa;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .location {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        nav {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .expertise-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: var(--light-color);
+            transition: transform 0.3s;
+        }
+
+        .expertise-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-item i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .expertise-item h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item ul {
+            padding-left: 1.5rem;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-item h3 {
+            color: var(--primary-color);
+        }
+
+        .institution {
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .year {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .skills-container {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            color: var(--light-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ramesh M</h1>
+            <p class="location">Bengaluru, India</p>
+            <div class="social-links">
+                <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="email"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="phone"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="card">
+            <h2>Professional Summary</h2>
+            <p>Finance and accounting professional with 8+ years of experience in Finance, Accounting, and Tax functions. Expertise in accounting operations, accounts payable, statutory compliance, and payroll management. Proficient in SAP, Tally, Greytip, and Winman with strong analytical skills using Microsoft Excel.</p>
+        </section>
+
+        <section id="expertise" class="card">
+            <h2>Areas of Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Accounts</h3>
+                    <p>Comprehensive accounting operations including book closure activities and financial reporting.</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Accounts Payable</h3>
+                    <p>Invoice verification, payment processing, and vendor reconciliations.</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Taxation</h3>
+                    <p>GST, TDS, PT, PF returns and compliance with statutory requirements.</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Payroll</h3>
+                    <p>Payroll management, disbursement, and employee tax planning.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="card">
+            <h2>Experience Highlights</h2>
+            <div class="experience-item">
+                <h3>Accounting Operations</h3>
+                <ul>
+                    <li>Book closure activities including accruals, prepaid expenses, depreciation workings</li>
+                    <li>Preparation of forex gain/loss statements and updating fixed asset register</li>
+                    <li>Monthly MIS reports, cost center-wise costing, and P&L reports</li>
+                    <li>Support during audits and financial statement preparation</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Accounts Payable</h3>
+                <ul>
+                    <li>Invoice verification with agreements and timely payment processing</li>
+                    <li>Vendor reconciliations to identify gaps</li>
+                    <li>Handling employee reimbursements</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Statutory Compliance</h3>
+                <ul>
+                    <li>Filed GST, TDS, PT, PF returns</li>
+                    <li>Handled GST audits, payments, and refunds</li>
+                    <li>TDS calculations, monthly payments, quarterly returns</li>
+                    <li>Issuing Form 16/16A and ensuring compliance deadlines</li>
+                    <li>ROC filings including Form 8, Form 11, AOC-4, and MGT-7</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Payroll Management</h3>
+                <ul>
+                    <li>Preparation of payout statements and timely disbursement</li>
+                    <li>Compliance with statutory requirements</li>
+                    <li>Employee tax planning and preparation of Form 16</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>MBA in Finance & Marketing</h3>
+                <p class="institution">JNT University Anthanpuram</p>
+                <p class="year">2016</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Commerce</h3>
+                <p class="institution">Rayalaseema University</p>
+                <p class="year">2014</p>
+            </div>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Accounting Software</h3>
+                    <div class="skill-badges">
+                        <span class="badge">SAP</span>
+                        <span class="badge">Tally</span>
+                        <span class="badge">Greytip</span>
+                        <span class="badge">Winman</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Microsoft Office</h3>
+                    <div class="skill-badges">
+                        <span class="badge">Excel (Advanced)</span>
+                        <span class="badge">Word</span>
+                        <span class="badge">PowerPoint</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ramesh M. All rights reserved.</p>
+            <p class="disclaimer">This document is for your organization's internal use only and should not be copied or distributed to any third-party.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
